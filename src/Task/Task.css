@@ -1,0 +1,21 @@
+.task {
+}
+
+.task .task-title {
+}
+
+.task.todo .task-title {
+
+}
+
+.task.done .task-title {
+}
+
+.task .status {
+}
+
+.task.todo .status {
+}
+
+.task.done .status {
+}
