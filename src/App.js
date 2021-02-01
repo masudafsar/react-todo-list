@@ -1,20 +1,24 @@
 import './App.css';
 import {useState} from "react";
 import Task from "./Task/Task";
+import TaskInput from "./TaskInput/TaskInput";
 
 const App = () => {
-    const [tasksState, setTasksState] = useState([
-        {title: 'Create a ToDo list App', done: false},
-        {title: 'Learn about ReactJs', done: true}
-    ])
+    const [tasksState, setTasksState] = useState([])
 
     const taskToggleHandler = (index) => {
         const task = {...tasksState[index]};
-        task.done=!task.done;
+        task.done = !task.done;
         const tasks = [...tasksState];
         tasks[index] = task;
         setTasksState(tasks);
     }
+
+    const addNewTask = (taskTitle) => {
+        const tasks = [...tasksState];
+        tasks.push({title: taskTitle, done: false});
+        setTasksState(tasks);
+    };
 
     let tasks = tasksState.map((task, index) => {
         return (
@@ -28,6 +32,7 @@ const App = () => {
 
     return (
         <div className="App">
+            <TaskInput onSubmitHandler={addNewTask}/>
             {tasks}
         </div>
     );
