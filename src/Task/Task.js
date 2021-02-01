@@ -7,8 +7,8 @@ const Task = ({title, done, toggleHandler}) => {
 
     return (
         <div className={taskStatusClass}>
-            <div className="status" onClick={toggleHandler}/>
             <div className="task-title">{title}</div>
+            <div className="status" onClick={toggleHandler}/>
         </div>
     )
 };
