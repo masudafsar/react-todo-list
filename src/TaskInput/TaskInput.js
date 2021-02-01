@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './TaskInput.css';
 
 const TaskInput = ({onSubmitHandler}) => {
     const [taskTitleState, setTaskTitleState] = useState('');
@@ -14,7 +15,7 @@ const TaskInput = ({onSubmitHandler}) => {
 
     return (
         <form className="task-input" onSubmit={onFormSubmit}>
-            <input type="text" className="input" onChange={onInputChangeHandler}/>
+            <input type="text" className="input" placeholder="Inser a task here..." onChange={onInputChangeHandler}/>
             <button type="submit" className="submit">Add</button>
         </form>
     );
