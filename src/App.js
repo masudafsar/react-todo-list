@@ -16,7 +16,7 @@ const App = () => {
 
     const addNewTask = (taskTitle) => {
         const tasks = [...tasksState];
-        tasks.push({title: taskTitle, done: false});
+        tasks.unshift({title: taskTitle, done: false});
         setTasksState(tasks);
     };
 
