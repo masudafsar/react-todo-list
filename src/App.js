@@ -32,7 +32,7 @@ const App = () => {
         setTasksState(tasks);
     };
 
-    let tasks = tasksState.map((task) => {
+    const taskGenerator = (task) => {
         return (
             <Task
                 key={task.id}
@@ -41,12 +41,17 @@ const App = () => {
                 toggleHandler={() => taskToggleHandler(task.id)}
                 removeHandler={() => taskRemoveHandler(task.id)}/>
         );
-    });
+    };
+
+    let todoTasks = tasksState.filter(task => !task.done).map(taskGenerator);
+    let doneTasks = tasksState.filter(task => task.done).map(taskGenerator);
 
     return (
         <div className="App">
             <TaskInput onSubmitHandler={addNewTask}/>
-            {tasks}
+            {todoTasks}
+            <hr/>
+            {doneTasks}
         </div>
     );
 }
