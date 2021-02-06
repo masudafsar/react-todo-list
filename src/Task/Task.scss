@@ -9,12 +9,23 @@
   display: flex;
 
   .task-title {
-    margin: 16px;
+    padding: 16px;
     flex: 1;
   }
 
   .status {
     width: 66px;
+  }
+
+  .remove {
+    width: 66px;
+    background-color: #DA4453;
+    border: 1px solid #DA4453;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: 48px;
   }
 
   &.todo {
