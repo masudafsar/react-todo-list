@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Task from "./Task/Task";
 import TaskInput from "./TaskInput/TaskInput";
+import CollapsiblePanel from "./CollapsiblePanel/CollapsiblePanel";
 
 import './App.scss';
 
@@ -50,8 +51,9 @@ const App = () => {
         <div className="App">
             <TaskInput onSubmitHandler={addNewTask}/>
             {todoTasks}
-            <hr/>
-            {doneTasks}
+            <CollapsiblePanel>
+                {doneTasks}
+            </CollapsiblePanel>
         </div>
     );
 }
