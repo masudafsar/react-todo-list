@@ -2,9 +2,6 @@
 
 .task {
   margin-bottom: 16px;
-  background-color: $color-gray-lighter;
-  border: 1px solid $color-gray-light;
-  border-radius: $size-border-radius;
   font-size: 22px;
   font-weight: bold;
   line-height: 32px;
@@ -12,29 +9,51 @@
 
   .task-title {
     padding: 16px;
+    background-color: $color-gray-lighter;
+    border: 1px solid $color-gray-light;
+    border-right-width: 0;
+    border-left-width: 0;
     flex: 1;
   }
 
   .status {
     width: 66px;
-    background-color: $color-blue-light;
-    border: 1px solid $color-blue-dark;
-    border-left: 0;
+    background-color: $color-gray-lighter;
+    border: 1px solid $color-gray-light;
+    border-right: 0;
     border-radius: $size-border-radius 0 0 $size-border-radius;
-    color: $color-white;
+    color: $color-gray-dark;
     font-size: $size-icon;
     line-height: $size-icon * 1.5;
+
+    &:hover {
+      color: $color-blue-dark;
+      outline: none;
+    }
+
+    &:focus {
+      @extend :hover;
+    }
   }
 
   .remove {
     width: 66px;
-    background-color: $color-red-light;
-    border: 1px solid $color-red-dark;
+    background-color: $color-gray-lighter;
+    border: 1px solid $color-gray-light;
     border-left: 0;
     border-radius: 0 $size-border-radius $size-border-radius 0;
-    color: $color-white;
+    color: $color-gray-dark;
     font-size: $size-icon;
     line-height: $size-icon * 1.5;
+
+    &:hover {
+      color: $color-red-dark;
+      outline: none;
+    }
+
+    &:focus {
+      @extend :hover;
+    }
   }
 
   &.todo {
@@ -42,6 +61,9 @@
     }
 
     .status {
+    }
+
+    .remove {
     }
   }
 
@@ -53,6 +75,9 @@
     }
 
     .status {
+    }
+
+    .remove {
     }
   }
 }
