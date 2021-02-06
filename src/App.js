@@ -7,7 +7,8 @@ import './App.scss';
 const App = () => {
     const [tasksState, setTasksState] = useState([])
 
-    const taskToggleHandler = (index) => {
+    const taskToggleHandler = (id) => {
+        const index = tasksState.findIndex(task => task.id === id);
         const task = {...tasksState[index]};
         task.done = !task.done;
         const tasks = [...tasksState];
@@ -15,28 +16,30 @@ const App = () => {
         setTasksState(tasks);
     }
 
-    const taskRemoveHandler = (index) => {
-        // const task = {...tasksState[index]};
+    const taskRemoveHandler = (id) => {
+        const index = tasksState.findIndex(task => task.id === id);
         const tasks = [...tasksState];
         tasks.splice(index, 1);
-        // tasks[index] = task;
         setTasksState(tasks);
     }
 
     const addNewTask = (taskTitle) => {
         const tasks = [...tasksState];
-        tasks.unshift({title: taskTitle, done: false});
+        const newTaskId = tasks.length !== 0
+            ? tasks[0].id + 1
+            : 0;
+        tasks.unshift({id: newTaskId, title: taskTitle, done: false});
         setTasksState(tasks);
     };
 
-    let tasks = tasksState.map((task, index) => {
+    let tasks = tasksState.map((task) => {
         return (
             <Task
-                key={index}
+                key={task.id}
                 done={task.done}
                 title={task.title}
-                toggleHandler={() => taskToggleHandler(index)}
-                removeHandler={() => taskRemoveHandler(index)}/>
+                toggleHandler={() => taskToggleHandler(task.id)}
+                removeHandler={() => taskRemoveHandler(task.id)}/>
         );
     });
 
