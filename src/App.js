@@ -15,6 +15,14 @@ const App = () => {
         setTasksState(tasks);
     }
 
+    const taskRemoveHandler = (index) => {
+        // const task = {...tasksState[index]};
+        const tasks = [...tasksState];
+        tasks.splice(index, 1);
+        // tasks[index] = task;
+        setTasksState(tasks);
+    }
+
     const addNewTask = (taskTitle) => {
         const tasks = [...tasksState];
         tasks.unshift({title: taskTitle, done: false});
@@ -27,7 +35,8 @@ const App = () => {
                 key={index}
                 done={task.done}
                 title={task.title}
-                toggleHandler={() => taskToggleHandler(index)}/>
+                toggleHandler={() => taskToggleHandler(index)}
+                removeHandler={() => taskRemoveHandler(index)}/>
         );
     });
 
