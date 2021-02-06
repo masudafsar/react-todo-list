@@ -1,5 +1,7 @@
 import React from 'react';
 import './TaskInput.scss';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlus} from "@fortawesome/free-solid-svg-icons";
 
 const TaskInput = ({onSubmitHandler}) => {
     let taskInput = React.createRef();
@@ -14,7 +16,9 @@ const TaskInput = ({onSubmitHandler}) => {
     return (
         <form className="task-input" onSubmit={onFormSubmit}>
             <input type="text" className="input" placeholder="Inser a task here..." ref={taskInput}/>
-            <button type="submit" className="submit">Add</button>
+            <button type="submit" className="submit">
+                <FontAwesomeIcon icon={faPlus}/>
+            </button>
         </form>
     );
 };
