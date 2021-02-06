@@ -9,7 +9,7 @@
     padding: 16px;
     border: 1px solid $color-gray-dark;
     border-right: 0;
-    border-radius: 4px 0 0 4px;
+    border-radius: $size-border-radius 0 0 $size-border-radius;
     color: $color-gray-darkest;
     font-size: 22px;
     line-height: 32px;
@@ -32,7 +32,7 @@
     width: 66px;
     border: 1px solid $color-green-dark;
     border-left: 0;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 $size-border-radius $size-border-radius 0;
     font-size: 32px;
     line-height: 48px;
     background-color: $color-green-light;

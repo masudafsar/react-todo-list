@@ -4,7 +4,7 @@
   margin-bottom: 16px;
   background-color: $color-gray-lighter;
   border: 1px solid $color-gray-light;
-  border-radius: 4px;
+  border-radius: $size-border-radius;
   font-size: 22px;
   font-weight: bold;
   line-height: 32px;
@@ -24,7 +24,7 @@
     background-color: $color-red-light;
     border: 1px solid $color-red-dark;
     border-left: 0;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 $size-border-radius $size-border-radius 0;
     color: $color-white;
     font-size: 32px;
     line-height: 48px;
@@ -32,7 +32,6 @@
 
   &.todo {
     .task-title {
-
     }
 
     .status {
