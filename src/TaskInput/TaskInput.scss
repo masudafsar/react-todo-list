@@ -33,10 +33,10 @@
     border: 1px solid $color-green-dark;
     border-left: 0;
     border-radius: 0 $size-border-radius $size-border-radius 0;
-    font-size: 32px;
-    line-height: 48px;
     background-color: $color-green-light;
     color: $color-white;
+    font-size: $size-icon;
+    line-height: $size-icon * 1.5;
 
     &:hover {
       outline: none;

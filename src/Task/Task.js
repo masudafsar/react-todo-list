@@ -16,9 +16,9 @@ const Task = ({title, done, toggleHandler, removeHandler}) => {
 
     return (
         <div className={taskStatusClass}>
-            <div className="status" onClick={toggleHandler}>
+            <button type="button" className="status" onClick={toggleHandler}>
                 <FontAwesomeIcon icon={taskStatusIcon}/>
-            </div>
+            </button>
             <div className="task-title">{title}</div>
             <button type="button" className="remove" onClick={removeHandler}>
                 <FontAwesomeIcon icon={faTrashAlt}/>
