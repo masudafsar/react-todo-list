@@ -1,10 +1,9 @@
 .task-input {
-    margin-bottom: 16px;
-    overflow: hidden;
-    display: flex;
-}
+  margin-bottom: 16px;
+  overflow: hidden;
+  display: flex;
 
-.task-input .input {
+  .input {
     padding: 16px;
     border: 1px solid #AAB2BD;
     border-right: 0;
@@ -13,13 +12,21 @@
     font-size: 22px;
     line-height: 32px;
     flex: 1;
-}
 
-.task-input .input::placeholder {
-    color: #AAB2BD;
-}
+    &:hover {
+      outline: none;
+    }
 
-.task-input .submit {
+    &:focus {
+      @extend :hover;
+    }
+
+    &::placeholder {
+      color: #AAB2BD;
+    }
+  }
+
+  .submit {
     width: 66px;
     border: 1px solid #37BC9B;
     border-left: 0;
@@ -28,16 +35,13 @@
     line-height: 32px;
     background-color: #48CFAD;
     color: #FFFFFF;
-}
 
-.task-input .submit:hover,
-.task-input .submit:focus {
-    background-color: #37BC9B;
-}
+    &:hover {
+      outline: none;
+    }
 
-.task-input .input:hover,
-.task-input .input:focus,
-.task-input .submit:hover,
-.task-input .submit:focus {
-    outline: none;
+    &:focus {
+      @extend :hover;
+    }
+  }
 }

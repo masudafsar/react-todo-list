@@ -1,0 +1,41 @@
+.task {
+  margin-bottom: 16px;
+  background-color: #E6E9ED;
+  border: 1px solid #CCD1D9;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 32px;
+  display: flex;
+
+  .task-title {
+    margin: 16px;
+    flex: 1;
+  }
+
+  .status {
+    width: 66px;
+  }
+
+  &.todo {
+    .task-title {
+
+    }
+
+    .status {
+      background-color: #DA4453;
+    }
+  }
+
+  &.done {
+    .task-title {
+      font-style: italic;
+      text-decoration: line-through #656D78;
+      color: #AAB2BD;
+    }
+
+    .status {
+      background-color: #4A89DC;
+    }
+  }
+}

@@ -1,7 +1,8 @@
-import './App.css';
 import {useState} from "react";
 import Task from "./Task/Task";
 import TaskInput from "./TaskInput/TaskInput";
+
+import './App.scss';
 
 const App = () => {
     const [tasksState, setTasksState] = useState([])

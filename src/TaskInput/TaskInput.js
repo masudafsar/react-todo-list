@@ -1,5 +1,5 @@
 import React from 'react';
-import './TaskInput.css';
+import './TaskInput.scss';
 
 const TaskInput = ({onSubmitHandler}) => {
     let taskInput = React.createRef();
