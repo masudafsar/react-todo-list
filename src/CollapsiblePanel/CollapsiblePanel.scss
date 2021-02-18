@@ -1,7 +1,7 @@
 @import "../variable";
 
-.collapsible-panel {
-  .handle {
+.CollapsiblePanel {
+  .Handle {
     width: 100%;
     height: auto;
     margin: 0;
@@ -30,10 +30,10 @@
     }
   }
 
-  .content {
+  .Content {
     display: none;
 
-    &.show {
+    &.Show {
       display: block;
     }
   }
