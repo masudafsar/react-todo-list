@@ -1,5 +1,5 @@
 import React from 'react';
-import './TaskInput.scss';
+import styleClasses from './TaskInput.Module.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 
@@ -14,9 +14,9 @@ const TaskInput = ({onSubmitHandler}) => {
     };
 
     return (
-        <form className="task-input" onSubmit={onFormSubmit}>
-            <input type="text" className="input" placeholder="Inser a task here..." ref={taskInput}/>
-            <button type="submit" className="submit">
+        <form className={styleClasses.TaskInput} onSubmit={onFormSubmit}>
+            <input type="text" className={styleClasses.Input} placeholder="Insert a task here..." ref={taskInput}/>
+            <button type="submit" className={styleClasses.Submit}>
                 <FontAwesomeIcon icon={faPlus}/>
             </button>
         </form>

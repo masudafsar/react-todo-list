@@ -3,7 +3,7 @@ import Task from "./Task/Task";
 import TaskInput from "./TaskInput/TaskInput";
 import CollapsiblePanel from "./CollapsiblePanel/CollapsiblePanel";
 
-import './App.scss';
+import styleClasses from './App.module.scss';
 
 const App = () => {
     const [tasksState, setTasksState] = useState([])
@@ -48,7 +48,7 @@ const App = () => {
     let doneTasks = tasksState.filter(task => task.done).map(taskGenerator);
 
     return (
-        <div className="App">
+        <div className={styleClasses.App}>
             <TaskInput onSubmitHandler={addNewTask}/>
             {todoTasks}
             <CollapsiblePanel>

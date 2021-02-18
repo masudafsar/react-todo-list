@@ -1,11 +1,11 @@
 @import "../variable";
 
-.task-input {
+.TaskInput {
   margin-bottom: 16px;
   overflow: hidden;
   display: flex;
 
-  .input {
+  .Input {
     padding: 16px;
     border: 1px solid $color-gray-dark;
     border-right: 0;
@@ -28,7 +28,7 @@
     }
   }
 
-  .submit {
+  .Submit {
     width: 66px;
     border: 1px solid $color-green-dark;
     border-left: 0;

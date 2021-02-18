@@ -1,13 +1,13 @@
 @import "../variable";
 
-.task {
+.Task {
   margin-bottom: 16px;
   font-size: 22px;
   font-weight: bold;
   line-height: 32px;
   display: flex;
 
-  .task-title {
+  .TaskTitle {
     padding: 16px;
     background-color: $color-gray-lighter;
     border: 1px solid $color-gray-light;
@@ -16,7 +16,7 @@
     flex: 1;
   }
 
-  .status {
+  .Status {
     width: 66px;
     background-color: $color-gray-lighter;
     border: 1px solid $color-gray-light;
@@ -36,7 +36,7 @@
     }
   }
 
-  .remove {
+  .Remove {
     width: 66px;
     background-color: $color-gray-lighter;
     border: 1px solid $color-gray-light;
@@ -56,29 +56,29 @@
     }
   }
 
-  &.todo {
-    .task-title {
+  &.Todo {
+    .TaskTitle {
     }
 
-    .status {
+    .Status {
     }
 
-    .remove {
+    .Remove {
     }
   }
 
-  &.done {
-    .task-title {
+  &.Done {
+    .TaskTitle {
       font-style: italic;
       text-decoration: line-through $color-gray-darker;
       color: $color-gray-dark;
     }
 
-    .status {
+    .Status {
       color: $color-blue-dark;
     }
 
-    .remove {
+    .Remove {
     }
   }
 }
