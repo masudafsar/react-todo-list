@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretDown, faCaretUp} from "@fortawesome/free-solid-svg-icons";
 
-import styleClasses from './CollapsiblePanel.scss'
+import styleClasses from './CollapsiblePanel.module.scss'
 
 const CollapsiblePanel = ({children}) => {
     const [status, setStatus] = useState(false);
