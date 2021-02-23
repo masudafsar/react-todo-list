@@ -1,9 +1,11 @@
 import React from 'react';
-import styleClasses from './Task.module.scss'
+import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSquare} from "@fortawesome/free-regular-svg-icons";
 import {faCheckSquare} from "@fortawesome/free-regular-svg-icons";
 import {faTrashAlt} from "@fortawesome/free-regular-svg-icons";
+
+import styleClasses from './Task.module.scss'
 
 const Task = ({title, done, toggleHandler, removeHandler}) => {
     let taskStatusClass = [styleClasses.Task];
@@ -34,6 +36,13 @@ const Task = ({title, done, toggleHandler, removeHandler}) => {
             </button>
         </div>
     )
+};
+
+Task.propTypes = {
+    title: PropTypes.string,
+    done: PropTypes.bool,
+    toggleHandler: PropTypes.func,
+    removeHandler: PropTypes.func,
 };
 
 export default Task;
