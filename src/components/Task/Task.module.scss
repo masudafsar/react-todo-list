@@ -1,0 +1,84 @@
+@import "../../variable";
+
+.Task {
+    margin-bottom: 16px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 32px;
+    display: flex;
+
+    .TaskTitle {
+        padding: 16px;
+        background-color: $color-gray-lighter;
+        border: 1px solid $color-gray-light;
+        border-right-width: 0;
+        border-left-width: 0;
+        flex: 1;
+    }
+
+    .Status {
+        width: 66px;
+        background-color: $color-gray-lighter;
+        border: 1px solid $color-gray-light;
+        border-right: 0;
+        border-radius: $size-border-radius 0 0 $size-border-radius;
+        color: $color-gray-dark;
+        font-size: $size-icon;
+        line-height: $size-icon * 1.5;
+
+        &:hover {
+            color: $color-blue-dark;
+            outline: none;
+        }
+
+        &:focus {
+            @extend :hover;
+        }
+    }
+
+    .Remove {
+        width: 66px;
+        background-color: $color-gray-lighter;
+        border: 1px solid $color-gray-light;
+        border-left: 0;
+        border-radius: 0 $size-border-radius $size-border-radius 0;
+        color: $color-gray-dark;
+        font-size: $size-icon;
+        line-height: $size-icon * 1.5;
+
+        &:hover {
+            color: $color-red-dark;
+            outline: none;
+        }
+
+        &:focus {
+            @extend :hover;
+        }
+    }
+
+    &.Todo {
+        .TaskTitle {
+        }
+
+        .Status {
+        }
+
+        .Remove {
+        }
+    }
+
+    &.Done {
+        .TaskTitle {
+            font-style: italic;
+            text-decoration: line-through $color-gray-darker;
+            color: $color-gray-dark;
+        }
+
+        .Status {
+            color: $color-blue-dark;
+        }
+
+        .Remove {
+        }
+    }
+}

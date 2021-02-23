@@ -1,0 +1,49 @@
+@import "../../variable";
+
+.TaskInput {
+    margin-bottom: 16px;
+    overflow: hidden;
+    display: flex;
+
+    .Input {
+        padding: 16px;
+        border: 1px solid $color-gray-dark;
+        border-right: 0;
+        border-radius: $size-border-radius 0 0 $size-border-radius;
+        color: $color-gray-darkest;
+        font-size: 22px;
+        line-height: 32px;
+        flex: 1;
+
+        &:hover {
+            outline: none;
+        }
+
+        &:focus {
+            @extend :hover;
+        }
+
+        &::placeholder {
+            color: $color-gray-dark;
+        }
+    }
+
+    .Submit {
+        width: 66px;
+        border: 1px solid $color-green-dark;
+        border-left: 0;
+        border-radius: 0 $size-border-radius $size-border-radius 0;
+        background-color: $color-green-light;
+        color: $color-white;
+        font-size: $size-icon;
+        line-height: $size-icon * 1.5;
+
+        &:hover {
+            outline: none;
+        }
+
+        &:focus {
+            @extend :hover;
+        }
+    }
+}

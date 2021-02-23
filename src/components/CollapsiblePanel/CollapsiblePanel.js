@@ -26,7 +26,10 @@ const CollapsiblePanel = ({children}) => {
     if (children.length !== 0) {
         content = (
             <div className={styleClasses.CollapsiblePanel}>
-                <button type="button" className={styleClasses.Handle} onClick={toggleStatusHandler}>
+                <button
+                    type="button"
+                    className={styleClasses.Handle}
+                    onClick={toggleStatusHandler}>
                     <FontAwesomeIcon icon={handleIcon}/>
                     <span>{handleMessage}</span>
                     <FontAwesomeIcon icon={handleIcon}/>

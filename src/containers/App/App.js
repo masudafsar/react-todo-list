@@ -1,7 +1,8 @@
 import {useState} from "react";
-import Task from "./Task/Task";
-import TaskInput from "./TaskInput/TaskInput";
-import CollapsiblePanel from "./CollapsiblePanel/CollapsiblePanel";
+import Task from "../../components/Task/Task";
+import TaskInput from "../../components/TaskInput/TaskInput";
+import CollapsiblePanel
+    from "../../components/CollapsiblePanel/CollapsiblePanel";
 
 import styleClasses from './App.module.scss';
 

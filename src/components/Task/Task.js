@@ -19,11 +19,17 @@ const Task = ({title, done, toggleHandler, removeHandler}) => {
 
     return (
         <div className={taskStatusClass.join(' ')}>
-            <button type="button" className={styleClasses.Status} onClick={toggleHandler}>
+            <button
+                type="button"
+                className={styleClasses.Status}
+                onClick={toggleHandler}>
                 <FontAwesomeIcon icon={taskStatusIcon}/>
             </button>
             <div className={styleClasses.TaskTitle}>{title}</div>
-            <button type="button" className={styleClasses.Remove} onClick={removeHandler}>
+            <button
+                type="button"
+                className={styleClasses.Remove}
+                onClick={removeHandler}>
                 <FontAwesomeIcon icon={faTrashAlt}/>
             </button>
         </div>

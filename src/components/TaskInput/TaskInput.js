@@ -15,7 +15,8 @@ const TaskInput = ({onSubmitHandler}) => {
 
     return (
         <form className={styleClasses.TaskInput} onSubmit={onFormSubmit}>
-            <input type="text" className={styleClasses.Input} placeholder="Insert a task here..." ref={taskInput}/>
+            <input type="text" className={styleClasses.Input}
+                   placeholder="Insert a task here..." ref={taskInput}/>
             <button type="submit" className={styleClasses.Submit}>
                 <FontAwesomeIcon icon={faPlus}/>
             </button>
