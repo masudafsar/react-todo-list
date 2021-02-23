@@ -1,22 +1,27 @@
-import React from 'react';
-import styleClasses from './TaskInput.module.scss';
+import React, {useRef} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 
+import styleClasses from './TaskInput.module.scss';
+
 const TaskInput = ({onSubmitHandler}) => {
-    let taskInput = React.createRef();
+    let taskInputRef = useRef(null);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        if (taskInput.current.value && taskInput.current.value.trim())
-            onSubmitHandler(taskInput.current.value);
-        taskInput.current.value = '';
+        if (taskInputRef.current.value && taskInputRef.current.value.trim())
+            onSubmitHandler(taskInputRef.current.value);
+        taskInputRef.current.value = '';
+        taskInputRef.current.focus();
     };
 
     return (
         <form className={styleClasses.TaskInput} onSubmit={onFormSubmit}>
-            <input type="text" className={styleClasses.Input}
-                   placeholder="Insert a task here..." ref={taskInput}/>
+            <input
+                type="text"
+                className={styleClasses.Input}
+                placeholder="Insert a task here..."
+                ref={taskInputRef}/>
             <button type="submit" className={styleClasses.Submit}>
                 <FontAwesomeIcon icon={faPlus}/>
             </button>
