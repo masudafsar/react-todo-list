@@ -5,7 +5,7 @@ import CollapsiblePanel from "../../components/CollapsiblePanel/CollapsiblePanel
 
 import styleClasses from './App.module.scss';
 
-class App extends Component {
+class app extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ class App extends Component {
         };
     }
 
-    render() {
+    render = () => {
         let todoTasks = this.state.tasks.filter(task => !task.done).map(this.taskGenerator);
         let doneTasks = this.state.tasks.filter(task => task.done).map(this.taskGenerator);
 
@@ -65,4 +65,4 @@ class App extends Component {
     };
 }
 
-export default App;
+export default app;

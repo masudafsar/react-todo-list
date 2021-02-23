@@ -12,7 +12,7 @@ class CollapsiblePanel extends Component {
         };
     }
 
-    render() {
+    render = () => {
         let handleMessage = 'Show completed tasks';
         let handleIcon = faCaretDown;
         let contentClass = [styleClasses.Content];
@@ -45,7 +45,7 @@ class CollapsiblePanel extends Component {
         return content;
     }
 
-    toggleStatusHandler() {
+    toggleStatusHandler = () => {
         this.setState((prevState, props) => {
             return {expand: !prevState.expand};
         });
